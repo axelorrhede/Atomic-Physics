@@ -133,6 +133,8 @@ def perform_Gaussian_fit(x, y, region_start, region_stop, mu_guess, A_guess=0, s
             plt.step(peak_region_bc, peak_region_counts, where='mid', color='cornflowerblue', label='data') #plotting data
             plt.plot(peak_region_bc, GaussFunc(peak_region_bc, g_final.A, g_final.mu, g_final.sigma), color=color, label = 'Gaussian fit')
         plt.legend(loc='upper right', frameon=False)
+        plt.xlabel("Wavelength [nm]")   # set label for x-axis 
+        plt.ylabel("Counts")    
         plt.show()
         
     if (printing):
